@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Database\Factories\UserFactory;
+use Illuminate\Container\Attributes\Auth;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -31,4 +32,5 @@ class User extends Authenticatable
     {
         return $this->hasMany(Pentagram::class);
     }
+
 }
