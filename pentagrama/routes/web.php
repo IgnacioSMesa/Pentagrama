@@ -12,7 +12,7 @@ Route::middleware('guest')->group(function () {
 
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'no-store'])->group(function () {
     Route::view('/', 'home.notas')->name('notas');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
